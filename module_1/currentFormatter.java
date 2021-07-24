@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Locale;
 import java.text.NumberFormat;
 
 public class currentFormatter {
