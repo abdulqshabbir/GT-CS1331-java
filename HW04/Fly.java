@@ -26,9 +26,9 @@ public class Fly {
     }
     public String toString() {
         if (this.mass == 0.0) {
-            return "I’m dead, but I used to be a fly with a speed of "+ this.speed + ".";
+            return String.format("I’m dead, but I used to be a fly with a speed of %.2f.", this.speed);
         } else {
-            return "I’m a speedy fly with "+ this.speed +" speed and " + this.mass + " mass.";
+            return String.format("I’m a speedy fly with %.2f speed and %.2f mass.", this.speed, this.mass);
         }
     }
     public void grow(int addedMass) {
@@ -46,9 +46,5 @@ public class Fly {
     }
     public boolean isDead() {
         return this.mass == 0.0;
-    }
-    public static void main (String[] args) {
-        Fly prince = new Fly(0, 5);
-        System.out.println(prince.isDead());
     }
 }
