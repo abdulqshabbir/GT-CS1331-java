@@ -1,4 +1,4 @@
-public class Dog {
+public class Dog implements Comparable<Dog>{
     private String name;
     private double weight;
 
@@ -21,11 +21,17 @@ public class Dog {
         return false;
     }
 
-    public static void main (String[] args) {
-        Dog dog1 = new Dog("Princey", 7.3);
-        Dog dog2 = new Dog("Princey", 7.3);
+    public int compareTo(Dog otherDog) {
+        if (this.weight > otherDog.weight) {
+            return 1;
+        } else if (this.weight < otherDog.weight) {
+            return -1;  
+        } else {
+            return 0;
+        }
+    }
+    public String toString() {
+        return String.format("Dog's weight: %.1f", this.weight);
 
-        System.out.println("Are dog1 and dog2 equal?");
-        System.out.println(dog1.equals(dog2));
     }
 }
