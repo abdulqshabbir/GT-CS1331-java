@@ -1,0 +1,3 @@
+interface Crewmate {
+    void completeTask();
+}
